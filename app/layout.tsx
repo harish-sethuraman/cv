@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import { clsx } from "clsx";
@@ -20,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body className="bg-neutral-50">
         <main
           className={clsx(
