@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
+import { clsx } from "clsx";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-neutral-50">
+        <main
+          className={clsx(
+            "container shadow-lg print:shadow-none relative mx-auto scroll-my-12 bg-white overflow-auto mt-0 max-w-screen-md sm:p-12 p-[10vw]"
+          )}
+        >
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
