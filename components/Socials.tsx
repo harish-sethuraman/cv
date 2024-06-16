@@ -24,6 +24,7 @@ const Socials = ({
       <a
         href={href}
         target="_blank"
+        title={type === "web" ? `open ${href}` : `open ${type} profile`}
         rel="noopener noreferrer"
         className="flex items-center border p-1 rounded-[9999px] sm:border-0"
       >
