@@ -25,7 +25,7 @@ const Socials = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center border p-1 rounded-md sm:border-0"
+        className="flex items-center border p-1 rounded-[9999px] sm:border-0"
       >
         <Icon height="16px" />
         <span className="hidden sm:block">{children}</span>
